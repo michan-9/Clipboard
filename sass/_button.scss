@@ -1,0 +1,65 @@
+.btn-box {
+  @include fcolumn;
+
+  @include responsive(tab-port) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  & :first-child {
+    margin-bottom: 2.5rem;
+
+    @include responsive(tab-port) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #fff;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 48px;
+  border: 2px solid transparent;
+  outline: none;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  @include responsive(tab-port) {
+    width: 50%;
+  }
+
+  @include responsive(tab-land) {
+    width: 35%;
+  }
+
+  @include responsive(desktop) {
+    width: 17%;
+    font-size: 1.7rem;
+  }
+
+  &--cyan {
+    background-color: var(--cyan);
+    border: 2px solid hsl(171, 55%, 43%);
+    box-shadow: var(--shadow-cyan);
+  }
+
+  &--blue {
+    background-color: var(--blue);
+    border: 2px solid hsl(233, 38%, 50%);
+  }
+}

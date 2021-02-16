@@ -1,0 +1,8 @@
+.available {
+  padding: var(--basic-padding);
+  margin-bottom: 10rem;
+
+  @include responsive(tab-land) {
+    @include fcolumn;
+  }
+}

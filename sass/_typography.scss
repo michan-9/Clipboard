@@ -1,0 +1,35 @@
+%heading {
+  font-weight: 600;
+  color: var(--grayish-blue);
+  text-align: center;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 3rem;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 2.7rem;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 2.2rem;
+}
+
+/* BASIC PARAGRAPH */
+
+.paragraph {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 1.7rem;
+  line-height: 3rem;
+
+  @include responsive(tab-land) {
+    align-self: center;
+    width: 50%;
+  }
+}

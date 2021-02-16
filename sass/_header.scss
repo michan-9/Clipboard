@@ -1,0 +1,21 @@
+.header {
+  @include fcolumn;
+  justify-content: center;
+  padding: var(--basic-padding);
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0;
+  }
+
+  @include responsive(desktop) {
+    .paragraph {
+      width: 45%;
+    }
+
+    .heading-2 {
+      font-size: 3.7rem;
+    }
+  }
+}

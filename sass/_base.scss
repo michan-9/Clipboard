@@ -1,0 +1,52 @@
+/* CSS VARIABLES */
+
+:root {
+  --cyan: hsl(171, 66%, 44%);
+  --blue: hsl(233, 100%, 69%);
+  --grayish-blue: hsl(210, 10%, 33%);
+  --light-grayish-blue: hsl(201, 11%, 66%);
+
+  --basic-padding: 6.5rem 2.5rem;
+
+  @include responsive(desktop) {
+    --basic-padding: 6.5rem;
+  }
+
+  --shadow-cyan: 0 5px 25px hsla(171, 66%, 44%, 10);
+}
+
+/* BASIC RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px/16px (font-root) = 62.5%
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--light-grayish-blue);
+  min-height: 100vh;
+  background-image: url(../img/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+
+  @include responsive(tab-land) {
+    background-image: url(../img/bg-header-desktop.png);
+  }
+
+  @include responsive(desktop) {
+    max-width: 150rem;
+    margin: 0 auto;
+  }
+}

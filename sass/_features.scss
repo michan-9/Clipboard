@@ -1,0 +1,56 @@
+.features {
+  padding: var(--basic-padding);
+  margin-top: 2rem;
+
+  @include responsive(tab-land) {
+    @include fcolumn;
+  }
+
+  @include responsive(desktop) {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    .heading-2,
+    .paragraph {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+
+    &__img-box {
+      position: relative;
+    }
+
+    &__wrapper {
+      margin-bottom: 5rem;
+      margin-top: 2rem;
+
+      .paragraph {
+        width: 100%;
+        text-align: start;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+
+    @include responsive(desktop) {
+      position: absolute;
+      left: -10rem;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(desktop) {
+      align-items: flex-start;
+      width: 65%;
+    }
+  }
+}

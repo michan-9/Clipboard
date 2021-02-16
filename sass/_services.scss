@@ -1,0 +1,60 @@
+.services {
+  padding: var(--basic-padding);
+
+  @include responsive(tab-land) {
+    @include fcolumn;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 8rem;
+
+    @include responsive(desktop) {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    @include fcolumn;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(tab-land) {
+      flex: 1;
+
+      & .paragraph {
+        width: 85%;
+      }
+    }
+  }
+
+  &__customer {
+    @include fcolumn;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(tab-land) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 3rem 0;
+  }
+
+  &__company {
+    width: 13rem;
+    margin: 4rem 0;
+  }
+}
